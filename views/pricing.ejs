@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <%- include("./partial/header") %>
+    <%- include("./partial/nav") %>
+
+ 
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold mb-6 text-gray-800">
+                Pricing
+            </h1>
+            <p class="text-lg mb-8 text-gray-600">
+                Choose a plan that fits your needs.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+              
+                <div class="bg-white p-4 rounded-lg shadow-lg max-w-xs">
+                    <h2 class="text-xl font-bold mb-2 text-gray-800">Basic</h2>
+                    <p class="text-xl mb-2 text-gray-600">$19/month</p>
+                    <a href="/contact" class="bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition duration-300">
+                        Sign Up
+                    </a>
+                </div>
+            
+                <div class="bg-white p-4 rounded-lg shadow-lg max-w-xs">
+                    <h2 class="text-xl font-bold mb-2 text-gray-800">Pro</h2>
+                    <p class="text-xl mb-2 text-gray-600">$49/month</p>
+                    <a href="/contact" class="bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition duration-300">
+                        Sign Up
+                    </a>
+                </div>
+              
+                <div class="bg-white p-4 rounded-lg shadow-lg max-w-xs">
+                    <h2 class="text-xl font-bold mb-2 text-gray-800">Premium</h2>
+                    <p class="text-xl mb-2 text-gray-600">$99/month</p>
+                    <a href="/contact" class="bg-teal-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-teal-600 transition duration-300">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include("./partial/footer") %>
+</body>
+</html>

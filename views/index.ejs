@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Brand</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .text-gradient {
+            background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-shadow {
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+        .hero-background {
+            background-image: url('your-hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .carousel-slide {
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <%- include("./partial/header") %>
+    <%- include("./partial/nav") %>
+
+ 
+    <section class="hero-background bg-gray-800 text-white py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-8 text-gradient text-shadow">
+                Welcome to My Brand
+            </h1>
+            <p class="text-lg mb-4">
+                We specialize in creating unique and professional brand identities.
+            </p>
+            <p class="text-base mb-8">
+                Our services include custom logo design, business cards, social media graphics, app icons, and more. Get in touch to elevate your brand!
+            </p>
+            <a href="/tools" class="bg-teal-500 text-white py-3 px-6 rounded-full font-semibold hover:bg-teal-600 transition duration-300">
+                Create My Logo
+            </a>
+        </div>
+    </section>
+
+ 
+    <section class="bg-gradient-to-r from-teal-300 via-blue-400 to-indigo-500 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-black">Elevate Your Brand</h2>
+            <p class="text-lg mb-4 text-black">
+                Discover the power of a well-designed brand identity and make your mark in the market.
+            </p>
+            <a href="/pricing" class="bg-yellow-400 text-gray-800 py-3 px-6 rounded-full font-semibold hover:bg-yellow-300 transition duration-300">
+                Get Started
+            </a>
+        </div>
+    </section>
+    
+
+   
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">What Our Clients Say</h2>
+            <div class="relative overflow-hidden">
+                <div id="carousel" class="flex space-x-4">
+                    <div class="carousel-slide bg-white p-6 rounded-lg shadow-lg">
+                        <p class="text-lg mb-4">“The logo design was fantastic! It perfectly captures the essence of our brand.”</p>
+                        <p class="font-semibold">- Client A</p>
+                    </div>
+                    <div class="carousel-slide bg-white p-6 rounded-lg shadow-lg">
+                        <p class="text-lg mb-4">“Professional service and a stunning design. Highly recommend!”</p>
+                        <p class="font-semibold">- Client B</p>
+                    </div>
+                    <div class="carousel-slide bg-white p-6 rounded-lg shadow-lg">
+                        <p class="text-lg mb-4">“Excellent work and great communication. We are thrilled with the results!”</p>
+                        <p class="font-semibold">- Client C</p>
+                    </div>
+                </div>
+                <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700">
+                    &lt;
+                </button>
+                <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700">
+                    &gt;
+                </button>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="py-16 bg-blue-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Discover More</h2>
+            <p class="text-lg mb-4">
+                Explore our latest features and offerings designed to help you achieve your branding goals.
+            </p>
+            <a href="/features" class="bg-green-500 text-white py-3 px-6 rounded-full font-semibold hover:bg-green-600 transition duration-300">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+  
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
+            <form action="/submit" method="post" class="mx-auto max-w-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-left font-semibold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 transition duration-300" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-left font-semibold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 transition duration-300" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-left font-semibold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 transition duration-300" required></textarea>
+                </div>
+                <button type="submit" class="bg-teal-500 text-white py-3 px-6 rounded-full font-semibold hover:bg-teal-600 transition duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <%- include("./partial/footer") %>
+
+    <script>
+       
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+     
+        const slides = document.querySelectorAll('.carousel-slide');
+        let index = 0;
+
+        function showSlide(i) {
+            const offset = -i * 100;
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(${offset}%)`;
+            });
+        }
+
+        document.getElementById('next').addEventListener('click', function() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        });
+
+        document.getElementById('prev').addEventListener('click', function() {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        });
+
+       
+        showSlide(index);
+    </script>
+</body>
+</html>
